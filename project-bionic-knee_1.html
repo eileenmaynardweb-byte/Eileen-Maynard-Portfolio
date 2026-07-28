@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bionic Knee Safety Mechanism — Eileen Maynard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0E1B2E; --grid-line:rgba(140,190,220,0.08);
+    --paper:#EDF1F4; --paper-2:#E3E9EE; --ink:#14213A;
+    --cyan:#6FC3E4; --cyan-dim:rgba(111,195,228,0.35);
+    --amber:#E3B23C; --muted:#8CA3B8; --muted-dark:#5A7086;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--navy); color:var(--muted); font-family:'Source Serif 4', serif; line-height:1.65;}
+  h1,h2,h3{font-family:'Space Grotesk', sans-serif; color:#F4F7F9; margin:0; letter-spacing:-0.01em;}
+  .mono{font-family:'IBM Plex Mono', monospace; letter-spacing:0.06em;}
+  .grid-bg{position:fixed; inset:0; z-index:0; pointer-events:none;
+    background-image:linear-gradient(var(--grid-line) 1px, transparent 1px),linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size:44px 44px;
+    -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 90%);
+    mask-image:radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 90%);}
+  a{color:var(--cyan);}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--amber); outline-offset:3px;}
+  nav{position:relative; z-index:10; display:flex; align-items:center; justify-content:space-between; padding:26px 48px; max-width:1200px; margin:0 auto;}
+  nav .brand{font-size:1.05rem; font-weight:600; font-family:'IBM Plex Mono', monospace; color:#F4F7F9;}
+  nav .brand span{color:var(--cyan);}
+  nav a.back{color:var(--muted); text-decoration:none; font-family:'IBM Plex Mono', monospace; font-size:0.82rem;}
+  nav a.back:hover{color:#F4F7F9;}
+  main{position:relative; z-index:1;}
+  .wrap{max-width:900px; margin:0 auto; padding:20px 48px 100px;}
+  .eyebrow{color:var(--cyan); font-size:0.78rem; margin-bottom:14px; display:block;}
+  h1{font-size:clamp(2rem, 4vw, 2.8rem); max-width:20ch;}
+  .tags{display:flex; gap:8px; flex-wrap:wrap; margin-top:20px;}
+  .tag{font-family:'IBM Plex Mono', monospace; font-size:0.7rem; border:1px solid var(--cyan-dim); color:var(--cyan); padding:5px 10px; border-radius:2px;}
+  .hero-shot{margin-top:40px; aspect-ratio:16/9; border:1px dashed var(--muted-dark); border-radius:3px; overflow:hidden;
+    display:flex; align-items:center; justify-content:center; color:var(--muted-dark); font-family:'IBM Plex Mono', monospace; font-size:0.8rem; text-align:center;}
+  .hero-shot img{width:100%; height:100%; object-fit:cover; display:block;}
+  section{margin-top:56px;}
+  section h2{font-size:1.4rem; margin-bottom:16px;}
+  section p{color:#C7D5E0; font-size:1rem; max-width:70ch;}
+  .gallery{display:grid; grid-template-columns:repeat(auto-fill, minmax(220px,1fr)); gap:18px; margin-top:20px;}
+  .gallery .shot{aspect-ratio:4/3; border:1px dashed var(--muted-dark); border-radius:3px; overflow:hidden;
+    display:flex; align-items:center; justify-content:center; color:var(--muted-dark); font-family:'IBM Plex Mono', monospace; font-size:0.72rem; text-align:center; padding:10px;}
+  .gallery .shot img{width:100%; height:100%; object-fit:cover; display:block;}
+  .files{list-style:none; margin:20px 0 0; padding:0; display:flex; flex-direction:column; gap:10px;}
+  .files li{border:1px solid var(--cyan-dim); border-radius:2px; padding:14px 18px; display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;}
+  .files .name{font-family:'IBM Plex Mono', monospace; font-size:0.85rem; color:#F4F7F9;}
+  .files .dl{font-family:'IBM Plex Mono', monospace; font-size:0.75rem; text-decoration:none; border:1px solid var(--cyan-dim); padding:6px 12px; border-radius:2px;}
+  .files .dl:hover{background:var(--cyan); color:var(--navy); border-color:var(--cyan);}
+  footer{text-align:center; padding:34px 20px 60px; font-family:'IBM Plex Mono', monospace; font-size:0.72rem; color:var(--muted-dark);}
+</style>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+
+<nav>
+  <div class="brand">Eileen Maynard<span>.</span></div>
+  <a class="back" href="index.html#projects">&larr; Back to projects</a>
+</nav>
+
+<main>
+  <div class="wrap">
+    <span class="eyebrow mono">FIG. 02 — APSC 103</span>
+    <h1>Bionic Knee Safety Mechanism</h1>
+    <div class="tags">
+      <span class="tag">Fusion 360</span>
+    </div>
+
+    <div class="hero-shot">
+      <img src="prototype.jpg" alt="Bionic Knee Safety Mechanism project"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <span style="display:none; height:100%; align-items:center; justify-content:center;">Add a file named <b>prototype.jpg</b> in this folder</span>
+    </div>
+
+    <section>
+      <h2>Overview</h2>
+      <p>Our client, the Queen's Biomechatronic Design Team (QBMet), is developing a powered exoskeleton to help firefighters avoid injury during active duty. For APSC 103, our team of five was tasked with designing a fail-safe safety mechanism for the exoskeleton's knee joint: a system that could detect unsafe overextension or hyperflexion of the knee and cut power to the knee motor before the joint could cause injury. The mechanism had to work independently of the suit's software, since a fail-safe that relies on code isn't a true fail-safe.</p>
+      <p>We evaluated two sensing approaches: an analog hall effect sensor and a rotary potentiometer. A potentiometer measures angle directly through a physical wiper contact, which makes it simple to calibrate, but that same physical contact makes it prone to wear, contamination, and long-term drift — a poor fit for a device that has to survive dust, moisture, and debris on the fireground. A hall effect sensor instead senses a magnetic field with no moving parts, giving it fast response times, strong resistance to shock, vibration, and dirt, and no mechanical wear, at the cost of slightly higher complexity and sensitivity to magnetic interference. Weighing cost, durability, and real-world reliability, we selected the hall effect sensor.</p>
+      <p>Our final prototype mounts a hall effect sensor at a fixed point above the knee joint, with permanent magnets on custom 3D-printed brackets on the rotating side of the joint. As the knee rotates, the changing magnet position changes the sensor's output voltage, which drives a two-MOSFET switching stage that controls the motor's 24V power path. If the joint passes the calibrated safe range — or if the sensor signal is lost entirely, whether from disconnection or failure — the circuit defaults to cutting power, so the system fails safe rather than fails on. The full prototype, including sensor, magnets, brackets, and switching circuit, cost $98.78 CAD to build.</p>
+      <p>The prototype passed all six validation tests we ran against it: it reliably cut power at the 3.2° extension / 109.2° flexion thresholds across 20 repeated trials (with an average angular error of just 0.15°), showed zero false trips from electromagnetic interference over 10 trials, correctly defaulted to a safe shutdown whenever the sensor signal was deliberately severed, and kept performing with no loss of function after simulated dust and debris exposure. The clearest opportunities for the next iteration are adding a manual-reset circuit (currently the system re-arms automatically once back in a safe position, rather than requiring a deliberate reset) and moving from breadboard wiring to a small PCB with locking connectors, to make the assembly more resistant to vibration and physical shock.</p>
+    </section>
+
+    <section>
+      <h2>Fusion 360 models &amp; assemblies</h2>
+      <p>Renders of the full prototype bracket and electrical circuit.</p>
+      <div class="gallery">
+        <div class="shot">
+          <img src="prototype - 3.png"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <span style="display:none; height:100%; align-items:center; justify-content:center;">water-treatment-2.jpg</span>
+        </div>
+        <div class="shot">
+          <img src="prototype - 2.png"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <span style="display:none; width: 200%; height: auto; align-items:center; justify-content:center;">water-treatment-3.jpg</span>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>© 2026 Eileen Maynard</footer>
+
+</body>
+</html>
